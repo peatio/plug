@@ -292,6 +292,8 @@ defmodule Plug.Adapters.Cowboy do
 
   defp empty_headers?(request) do
     {headers, _} = :cowboy_req.headers(request)
+    IO.inspect "here is the header"
+    IO.inspect headers
     headers == []
   end
 
